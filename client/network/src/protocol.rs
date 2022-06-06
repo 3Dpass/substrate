@@ -82,11 +82,11 @@ const MAX_KNOWN_TRANSACTIONS: usize = 10240; // ~300kb per peer + overhead.
 /// Maximum allowed size for a block announce.
 const MAX_BLOCK_ANNOUNCE_SIZE: u64 = 1024 * 1024;
 /// Maximum allowed size for a transactions notification.
-const MAX_TRANSACTIONS_SIZE: u64 = 16 * 1024 * 1024;
+const MAX_TRANSACTIONS_SIZE: u64 = 128 * 1024 * 1024;
 
 /// Maximum size used for notifications in the block announce and transaction protocols.
 // Must be equal to `max(MAX_BLOCK_ANNOUNCE_SIZE, MAX_TRANSACTIONS_SIZE)`.
-pub(crate) const BLOCK_ANNOUNCES_TRANSACTIONS_SUBSTREAM_SIZE: u64 = 16 * 1024 * 1024;
+pub(crate) const BLOCK_ANNOUNCES_TRANSACTIONS_SUBSTREAM_SIZE: u64 = 128 * 1024 * 1024;
 
 /// Maximum number of transaction validation request we keep at any moment.
 const MAX_PENDING_TRANSACTIONS: usize = 8192;

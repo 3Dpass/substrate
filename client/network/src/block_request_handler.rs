@@ -42,8 +42,8 @@ const MAX_BODY_BYTES: usize = 8 * 1024 * 1024;
 pub fn generate_protocol_config(protocol_id: &ProtocolId) -> ProtocolConfig {
 	ProtocolConfig {
 		name: generate_protocol_name(protocol_id).into(),
-		max_request_size: 1024 * 1024,
-		max_response_size: 16 * 1024 * 1024,
+		max_request_size: 8 * 1024 * 1024,
+		max_response_size: 128 * 1024 * 1024,
 		request_timeout: Duration::from_secs(40),
 		inbound_queue: None,
 	}

@@ -235,7 +235,7 @@ where TSubstream: AsyncRead + AsyncWrite + Unpin + Send + 'static,
 		Box::pin(async move {
 			let mut framed = {
 				let mut codec = UviBytes::default();
-				codec.set_max_len(16 * 1024 * 1024);		// 16 MiB hard limit for packets.
+				codec.set_max_len(128 * 1024 * 1024);		// 128 MiB hard limit for packets.
 				Framed::new(socket, codec)
 			};
 
@@ -270,7 +270,7 @@ where TSubstream: AsyncRead + AsyncWrite + Unpin + Send + 'static,
 		Box::pin(async move {
 			let mut framed = {
 				let mut codec = UviBytes::default();
-				codec.set_max_len(16 * 1024 * 1024);		// 16 MiB hard limit for packets.
+				codec.set_max_len(128 * 1024 * 1024);		// 128 MiB hard limit for packets.
 				Framed::new(socket, codec)
 			};
 

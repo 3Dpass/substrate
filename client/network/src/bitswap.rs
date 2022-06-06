@@ -53,7 +53,7 @@ const LOG_TARGET: &str = "bitswap";
 // https://github.com/ipfs/js-ipfs-bitswap/blob/
 // d8f80408aadab94c962f6b88f343eb9f39fa0fcc/src/decision-engine/index.js#L16
 // We set it to the same value as max substrate protocol message
-const MAX_PACKET_SIZE: usize = 16 * 1024 * 1024;
+const MAX_PACKET_SIZE: usize = 128 * 1024 * 1024;
 
 // Max number of queued responses before denying requests.
 const MAX_RESPONSE_QUEUE: usize = 20;
