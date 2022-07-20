@@ -36,7 +36,7 @@ wat = "1.0"
 default = ["std"]
 std = [
 	"log/std",
-	"wasmi",
+	"wasmi/std",
 	"codec/std",
 	"sp-core/std",
 	"sp-io/std",
